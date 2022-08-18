@@ -11,6 +11,49 @@ import java.util.Set;
 public class App2 {
 
     public static void main(String[] args) {
+        Student student = new Student();
+        student.setName("huai");
+        student.setId("18");
+
+        Student student2 = new Student();
+        student2.setName("huai");
+        student2.setId("18");
+
+        Student student3 = new Student();
+        student3.setName("huai");
+        student3.setId("19");
+
+        Student student4 = new Student();
+        student3.setName("huai");
+        student3.setId("20");
+
+        Set<Student> set = new HashSet<>();
+        set.add(student);
+        set.add(student2);
+
+        Iterator<Student> iterator = set.iterator();
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        System.out.println("==========================");
+
+
+        while (iterator.hasNext()) {
+            if ("18".equals(iterator.next().getId())) {
+                iterator.remove();
+            }
+            System.out.println(iterator.next());
+        }
+
+
+
+
+//        extracted();
+    }
+
+    private static void extracted() {
         Person person1 = new Person();
         person1.setId("1");
         person1.setName("huai");
@@ -38,9 +81,6 @@ public class App2 {
             }
         }
     }
-
-
-
 
 
 }

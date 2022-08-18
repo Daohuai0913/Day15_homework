@@ -12,6 +12,15 @@ public class Student {
     private String name;
     private String sex;
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                '}';
+    }
+
     public Student(String id, String name, String sex) {
         this.id = id;
         this.name = name;
